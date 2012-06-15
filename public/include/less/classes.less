@@ -1,0 +1,42 @@
+// classes.less - LESS 함수, 2012 © yamoo9.com
+
+.box-shadow(@x: 1px, @y: 1px, @blur: 0px, @color: #212121) {
+	-webkit-box-shadow: @x @y @blur @color;
+	-moz-box-shadow: @x @y @blur @color;
+	box-shadow: @x @y @blur @color;
+}
+
+.inset-box-shadow(@x: 1px, @y: 1px, @blur: 0px, @color: #212121) {
+	-webkit-box-shadow: inset @x @y @blur @color;
+	-moz-box-shadow: inset @x @y @blur @color;
+	box-shadow: inset @x @y @blur @color;
+}
+
+.opacity(@opacity: 0.6) {
+	@opacity-for-ie: @opacity * 100; // LESS 변수 for IE
+	opacity: @opacity;
+	-ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(opacity=@{opacity-for-ie})";
+	filter: ~"progid:DXImageTransform.Microsoft.Alpha(opacity=@{opacity-for-ie})";
+}
+
+.border-radius(@radius: 8px) {
+	-webkit-border-radius: @radius;
+	-khtml-border-radius: @radius;
+	-moz-border-radius: @radius;
+	border-radius: @radius;
+}
+
+.outline-radius(@radius: 8px) {
+	-webkit-outline-radius: @radius;
+	-khtml-outline-radius: @radius;
+	-moz-outline-radius: @radius;
+	outline-radius: @radius;
+}
+
+.transition(@prop: all, @duration: 0.4s, @easing: ease, @delay: 0s) {
+	-webkit-transition: @prop @duration @easing @delay;
+	-moz-transition: @prop @duration @easing @delay;
+	-o-transition: @prop @duration @easing @delay;
+	-ms-transition: @prop @duration @easing @delay;
+	transition: @prop @duration @easing @delay;
+}

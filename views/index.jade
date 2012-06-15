@@ -1,0 +1,72 @@
+header(id="tab_design")
+	h1(id="brand")
+		a(href="#")탁스샤핑
+	nav(class="left_menu")
+		ol
+			li
+				a(href="#")목걸이
+			li
+				a(href="#")반지
+			li
+				a(href="#")팔찌		
+			li
+				a(href="#")머리핀
+			li
+				a(href="#")폰악세사리
+			li
+				a(href="#")희귀
+			li
+				a(href="#")코걸이
+			li
+				a(href="#")기타
+div(id="item_detail")
+	div(id="close_btn") 
+		strong x
+div(id="contents")
+	div(id="tab_wrap")
+		div(id="tab_nav")
+			ul
+					li(class="item btn")
+						a(href="#") 상품
+					li(class="login btn")
+						a(href="#") 로그인
+					li(class="shoppingCart btn")
+						a(href="#") 장바구니	
+		div(id="tab_state")
+			div(id="tab_state_sub")
+			div(id="helper")여기에 온 너희들 진심으로 환영한다. 반갑다.
+	div(class="tab_contents")
+		ul
+			li(class="item_list clearfix")
+				ul	
+					-data.forEach(function(item,index){
+					li	
+						a(href="#") <img src="./include/images/#{item.item_photo_main}" />
+						div(class="item")#{item.item_name}     #{item.item_price}
+						h3
+						p 
+					-});	
+			li(class="login  clearfix")
+				div(id="login")
+					form(id="login_form",action="#",method="get")
+						div(id="input_wrap")
+							p	
+								span 아이디
+								label(for="id")ID
+								input(id="id",name="id",type="text",placeholder="ID",required="required")
+							p	
+								span 비밀번호
+								label(for="pass")Pass
+								input(id="pass",name="pass",type="text",placeholder="PASS",required="required")
+							div(id="login_btn")	
+								a(href="#")로그인
+						div(id="member_menu")
+							p(id="join")	
+								a(href="#")회원가입
+							p	
+								a(href="#")아이디/비밀번호 찾기	
+				div(id="footer")
+					Copyright © TAKS Corp. All Rights Reserved.							
+
+			li(class="shoppingCart  clearfix")
+					장바구니 페이지입니다.						
